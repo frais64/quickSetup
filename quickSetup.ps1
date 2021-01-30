@@ -371,3 +371,11 @@ Write-Host "Hiding 3D Objects icon from This PC..."
                 Set-ItemProperty $Class -Name NoStaticDefaultVerb -Value "" 
                 } 
                     
+$confirm = Read-Host -Prompt "Activate Windows (MAS)? (y/N)"
+
+if ($confirm -eq "y") {
+    $MASurl = "https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS_1.4/Separate-Files-Version/Activators/HWID-KMS38_Activation/HWID_Activation.cmd"
+    $MASpath = "$env:TEMP\MAS.cmd" 
+    Invoke-WebRequest -Uri $MASurl -OutFile $MASpath
+    Invoke-Item -Path $MASpath
+}
