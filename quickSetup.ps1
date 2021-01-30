@@ -25,7 +25,7 @@ $toInstall = @(
     "thunderbird"
     "procexp" # Process explorer
     "youtube-dl"
-    "spotify"
+    #"spotify" marche pas pour une raison que j'ignore 
     "discord"
     "ifranview"
     "windirstat"
